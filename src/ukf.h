@@ -31,6 +31,12 @@ public:
   ///* predicted sigma points matrix
   MatrixXd Xsig_pred_;
 
+    /// radar noise matrix
+    MatrixXd R_Radar_;
+
+    /// lidar noise matrix
+    MatrixXd R_Lidar_;
+
   ///* time when the state is true, in us
   long long time_us_;
 
@@ -66,6 +72,8 @@ public:
 
   ///* Sigma point spreading parameter
   double lambda_;
+
+    int n_aug_points_;
 
 
   /**
